@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andrew Doyle — Portfolio</title>
+  <link rel="preload" href="me.jpg.png" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#">Andrew Doyle</a>
+
+      <!-- Mobile nav toggle -->
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="main-nav" data-nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__copy">
+        <h1>Hello, I’m Andrew Doyle.</h1>
+        <p class="muted">Computer programming student</p>
+        <p class="cta-row">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn alt" href="YOUR_RESUME.pdf" target="_blank" rel="noopener">Resume</a>
+        </p>
+      </div>
+
+      <!-- Keep the profile picture spot; uses your attached image -->
+      <img class="avatar" src="me.jpg.png" alt="Andrew Doyle profile photo" loading="eager" />
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p class="muted">
+        I am a beginner computer programming student learning and creating new projects.
+      </p>
+    </section>
+
+    <!-- PROJECTS (cards are rendered by script.js) -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="project-grid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="muted">
+          Email: <a href="mailto:andrew03doyle@gmail.com">andrew03doyle@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> ANDREW DOYLE
+  </footer>
+</body>
+</html>
