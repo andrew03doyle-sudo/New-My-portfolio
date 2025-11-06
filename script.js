@@ -1,7 +1,6 @@
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-
 const toggle = document.querySelector(".nav-toggle");
 const root = document.documentElement;
 const header = document.querySelector(".site-header");
@@ -14,12 +13,11 @@ if (toggle) {
   });
 }
 
-
 const projects = [
   {
     title: "Portfolio Site",
     desc: "Static site using HTML/CSS/JS. Clean layout and pine color palette.",
-    demo: "https://YOUR_DEMO_PORTFOLIO",
+    demo: "https://andrew03doyle-sudo.github.io/New-My-portfolio/",
     code: "https://github.com/YOUR_HANDLE/portfolio",
     tags: ["HTML", "CSS", "JS"]
   },
@@ -46,7 +44,6 @@ const projects = [
   }
 ];
 
-
 const grid = document.getElementById("project-grid");
 
 function projectCard(p) {
@@ -68,4 +65,24 @@ function projectCard(p) {
 
 if (grid) {
   projects.forEach(p => grid.appendChild(projectCard(p)));
+}
+
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(contactForm);
+    const name = (data.get("name") || "").trim();
+    const email = (data.get("email") || "").trim();
+    const msg = (data.get("message") || "").trim();
+
+    const subject = `Portfolio contact from ${name || "Visitor"}`;
+    const body =
+      `Name: ${name || "N/A"}\n` +
+      `Email: ${email || "N/A"}\n\n` +
+      `${msg}`;
+
+    const mailto = `mailto:andrew03doyle@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
 }

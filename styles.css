@@ -113,3 +113,24 @@ a:focus-visible{outline:3px solid var(--pine-2);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){
   .btn, .nav-toggle__bar{transition:none}
 }
+
+.contact-form { display: grid; gap: 10px; }
+.form-row { display: flex; flex-direction: column; gap: 6px; }
+
+.contact-form input,
+.contact-form textarea {
+  padding: .6rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  font: inherit;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid var(--pine-2);
+  outline-offset: 2px;
+  border-color: var(--pine-2);
+}
+
+.contact-form .tiny { font-size: .8rem; }

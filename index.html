@@ -60,12 +60,28 @@
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p class="muted">
-          Email: <a href="mailto:andrew03doyle@gmail.com">andrew03doyle@gmail.com</a>
-        </p>
+      <div class="card">
+    <form id="contact-form" class="contact-form" novalidate>
+      <div class="form-row">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Jane Doe">
       </div>
-    </section>
-  </main>
+
+      <div class="form-row">
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Hi Andrew, …" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send</button>
+      <p class="muted tiny">Submitting opens your email app to send the message.</p>
+    </form>
+  </div>
+</section>
 
   <footer class="site-footer">
     © <span id="year"></span> ANDREW DOYLE
