@@ -134,3 +134,59 @@ a:focus-visible{outline:3px solid var(--pine-2);outline-offset:2px}
 }
 
 .contact-form .tiny { font-size: .8rem; }
+
+.flip-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  transform-style: preserve-3d;
+  transition: transform .6s ease;
+  border-radius: var(--r, 14px);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: var(--r, 14px);
+  background: #fff;
+  box-shadow: var(--shadow, 0 6px 20px rgba(0,0,0,.06));
+}
+
+.flip-front h3 { margin: 0; font-size: 1.1rem; }
+.flip-back { transform: rotateY(180deg); }
+
+.flip-actions { margin-top: 8px; display: flex; gap: 8px; }
+.flip-btn {
+  cursor: pointer;
+  border: 1px solid var(--border, #e5e7eb);
+  background: var(--pine, #0f3d3e);
+  color: #fff;
+  padding: .55rem .85rem;
+  border-radius: 10px;
+  font: inherit;
+}
+.flip-btn.secondary { background: transparent; color: inherit; }
+
+.tech { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { padding: 4px 8px; border-radius: 999px; border: 1px solid var(--border, #e5e7eb); font-size: .85rem; }
