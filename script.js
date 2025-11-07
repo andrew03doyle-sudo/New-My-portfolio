@@ -16,7 +16,7 @@ if (toggle) {
 const projects = [
   {
     title: "Portfolio Site",
-    desc: "Static site using HTML/CSS/JS. Clean layout and pine color palette.",
+    desc: "Static site using HTML/CSS/JS.",
     demo: "https://andrew03doyle-sudo.github.io/New-My-portfolio/",
     code: "https://github.com/YOUR_HANDLE/portfolio",
     tags: ["HTML", "CSS", "JS"]
@@ -36,6 +36,20 @@ const projects = [
     tags: ["TAG", "TAG"]
   },
   {
+    title: "Future project",
+    desc: "Description.",
+    demo: "https://YOUR_DEMO_LINUX",
+    code: "https://github.com/YOUR_HANDLE/linux-notes",
+    tags: ["TAG", "TAG"]
+  },
+   {
+    title: "Future project",
+    desc: "Description.",
+    demo: "https://YOUR_DEMO_LINUX",
+    code: "https://github.com/YOUR_HANDLE/linux-notes",
+    tags: ["TAG", "TAG"]
+  },
+   {
     title: "Future project",
     desc: "Description.",
     demo: "https://YOUR_DEMO_LINUX",
